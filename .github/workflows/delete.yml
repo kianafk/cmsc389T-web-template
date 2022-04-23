@@ -1,0 +1,23 @@
+# This is a basic workflow to help you get started with Actions
+
+name: delete
+
+# Controls when the workflow will run
+on:
+ # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs: 
+  delete:
+   name: Delete
+   runs-on: ubuntu-latest
+   steps:
+      - name: Delete Website
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }} 
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+             unalias rm
+             rm -rf cmsc389T-web-template 
