@@ -25,4 +25,5 @@ jobs:
           port: ${{ secrets.PORT }}
       # Runs a set of commands using the runners shell
           script: |
+              cd pub/${{ secrets.USERNAME }}
               git clone https://github.com/kianafk/cmsc389T-web-template
