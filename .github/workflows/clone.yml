@@ -25,4 +25,4 @@ jobs:
           port: ${{ secrets.PORT }}
       # Runs a set of commands using the runners shell
           script: |
-              git clone git@github.com/kianafk/cmsc389T-web-template
+              git clone git@github.com:kianafk/cmsc389T-web-template
